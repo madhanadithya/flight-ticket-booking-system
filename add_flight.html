@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADD FLIGHTS</title>
+
+    <link rel="stylesheet" type="text/css" href="add_flight_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(".date").datetimepicker(); 
+        });
+    </script>
+</head>
+<body>
+
+<section class="main">
+    <h1 class="title">Add flights</h1>
+    <form name="myform" action="add_flight.php" method="post">
+        <div class="main-box">
+            <div class="input-box">
+                <span class="text">From</span>
+                <select required name='ffrom'>
+                    <option value="">Select location...</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Trichy">Trichy</option>
+                    <option value="Tripur">Tripur</option>
+                    <option value="Bengalore">Bengalore</option>
+                    <option value="Hydrabad">Hydrabad</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <span class="text">To</span>
+                <select required name='fto'>
+                    <option value="">Select location...</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Trichy">Trichy</option>
+                    <option value="Tripur">Tripur</option>
+                    <option value="Bengalore">Bengalore</option>
+                    <option value="Hydrabad">Hydrabad</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <span class="text">Departure date and time</span>
+                <input type="datetime-local" name="departure" class="form-control date" id="departure" required>
+            </div>
+
+            <div class="input-box">
+                <span class="text">Arrival date and time</span>
+                <input name="arrival" type="datetime-local" class="form-control date" id="arrival" required>
+            </div>
+
+            <div class="input-box">
+                <span class="text">Duration</span>
+                <input name="duration" type="text"  id="duration" placeholder="enter duration..."  required>
+            </div>
+
+            <div class="input-box">
+                <span class="text">Select Airline </span>
+                <select id="Airline" name="airline" required>
+                    <option value="">Select Airline...</option>
+                    <option value="Indigo">Indigo</option>
+                    <option value="Emirates">Emirates</option>
+                    <option value="Air India">Air India</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <span class="text">Price</span>
+                <input name="price" type="text"  id="price" placeholder="enter price..."  required>
+            </div>
+        </div>
+        <div class="btn">
+            <input type="submit" id="form-submit" value="ADD DETAILS">
+        </div>
+    </form>
+</section>
+
+</body>
+</html>
